@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Similitudes</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script defer src="similitudRenderer.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 20px 0;
+        }
+        #grafo {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            width: 100%;
+            height: 600px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #resultadoSimilitud {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .similitud-list {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+            width: 200px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .container {
+            padding: 20px;
+        }
+        .input-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .input-container input {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Buscar Similitudes
+    </header>
+    <div class="container">
+        <div class="input-container">
+            <input id="inputSimilitud" placeholder="Nombre de la providencia">
+            <input id="inputMinSimilitud" type="number" placeholder="Similitud mínima">
+            <button id="buscarSimilitud">Buscar</button>
+        </div>
+        <div id="resultadoSimilitud"></div>
+        <div style="display: flex; gap: 20px;">
+            <svg id="grafo"></svg>
+            <div class="similitud-list">
+                <h3>Similitudes</h3>
+                <ul id="similitudLista" style="list-style: none; padding: 0;"></ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Buscador de Providencias V.001-2024 - Desarrollado por Michael Guerrero y Carlos Díaz
+    </footer>
+</body>
+</html>

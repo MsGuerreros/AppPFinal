@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscador de Providencias</title>
+    <script defer src="renderer.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Buscador de Providencias</h1>
+        <div class="header-info">
+            <p>Maestría en Analítica de Datos - Curso: Big Data</p>
+            <p>Michael Guerrero y Carlos Díaz</p>
+        </div>
+    </header>
+
+    <div class="buscadores">
+        <input id="inputNombre" placeholder="Buscar por nombre">
+        <button id="buscarNombre">Buscar</button>
+        <input id="inputTipo" placeholder="Buscar por tipo">
+        <button id="buscarTipo">Buscar</button>
+        <select id="selectAnio"></select>
+        <button id="buscarAnio">Buscar</button>
+        <input id="inputTexto" placeholder="Buscar por texto">
+        <button id="buscarTexto">Buscar</button>
+        <button id="abrirSimilitud">Buscar Similitudes</button>
+    </div>
+
+    <p id="resultadosMensaje">Resultados encontrados: 0</p>
+
+    <table id="tablaResultados" class="tabla-resultados">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Año</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>
